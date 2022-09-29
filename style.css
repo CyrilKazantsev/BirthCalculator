@@ -1,0 +1,8 @@
+.text {
+    padding-right: 10px;
+}
+
+span {
+    display: inline-block;
+    position: absolute;
+}
