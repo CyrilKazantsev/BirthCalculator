@@ -1,12 +1,20 @@
-const BIRTHDAY = '14.05.2000';
-let birthdayCalculator = function(birthday) {
+let BIRTHDAY;
+const form = document.getElementById('form');
+function myFunction() {
+    let BIRTHDAY = document.getElementById("uniqueID").value;
+    toString(BIRTHDAY)
+    const age = birthdayCalculator(BIRTHDAY);
+    alert(birthdayCalculator(BIRTHDAY))
+  }
+
+function birthdayCalculator(birthday) {
     let today = new Date();
     let ddToday = +String(today.getDate()).padStart(2, '0');
     let mmToday = +String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     let yyyyToday = today.getFullYear();
-    let dd = +BIRTHDAY.split(".")[0];
-    let mm = +BIRTHDAY.split(".")[1];
-    let yy = BIRTHDAY.split(".")[2];
+    let yy = +birthday.split("-")[0];
+    let mm = +birthday.split("-")[1];
+    let dd = birthday.split("-")[2];
     let daysInBirthMonth = 32 - new Date(yy, mm-1, 32).getDate();
 
     let yyyyResult = mm < mmToday ? yyyyToday - yy : yyyyToday - yy - 1;
@@ -17,5 +25,4 @@ let birthdayCalculator = function(birthday) {
     return result
     
 }
-const age = birthdayCalculator(BIRTHDAY);
-console.log(age) 
+// const age = birthdayCalculator(BIRTHDAY);
