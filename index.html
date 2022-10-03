@@ -11,9 +11,9 @@
     <div class="text" >
         <p >Обрати внимание</p>
     </div>
-    <form action="/" onsubmit="myFunction()">
+    <form action="/" onsubmit="myFunction(event)">
         Enter birth date: <input type="date" name="fname" id="uniqueID">
-        <input type="submit" value="Submit">
+        <button type="button" value="Submit" onclick="myFunction(event)" > Submit </button>
       </form>
       
     <script src="./test.js"></script>

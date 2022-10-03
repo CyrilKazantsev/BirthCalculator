@@ -1,6 +1,8 @@
 let BIRTHDAY;
 const form = document.getElementById('form');
-function myFunction() {
+function myFunction(event) {
+    event.preventDefault();
+    alert(document.getElementById("uniqueID").value)
     let BIRTHDAY = document.getElementById("uniqueID").value;
     toString(BIRTHDAY)
     alert(birthdayCalculator(BIRTHDAY))
