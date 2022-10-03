@@ -3,7 +3,6 @@ const form = document.getElementById('form');
 function myFunction() {
     let BIRTHDAY = document.getElementById("uniqueID").value;
     toString(BIRTHDAY)
-    const age = birthdayCalculator(BIRTHDAY);
     alert(birthdayCalculator(BIRTHDAY))
   }
 
@@ -25,4 +24,3 @@ function birthdayCalculator(birthday) {
     return result
     
 }
-// const age = birthdayCalculator(BIRTHDAY);
